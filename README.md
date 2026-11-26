@@ -3,7 +3,7 @@
 Variation and change management for cost teams, from the first DCR to the approved VO.
 Built for the AAA Cost Code AI Challenge 2026.
 
-**Live tool:** https://mahmoudahmedibrahim-debug.github.io/-varilink/
+**Live tool:** https://mahmoudahmedibrahim-debug.github.io/mahmoud-varilink/
 
 ## Try it in two minutes
 1. Open the link. A fictional project, Palm Grove Residences, is loaded.
