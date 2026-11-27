@@ -99,7 +99,7 @@
     const omissions = sum(l => l.action === 'Omission');
     const additions = sum(l => l.action === 'Addition');
     const abortiveTotal = sum(l => l.action === 'Abortive');
-    const riskPct = change.riskPct != null && change.riskPct !== '' ? num(change.riskPct) : num((pkg.contract || {}).riskPct);
+    const riskPct = Math.max(0, change.riskPct != null && change.riskPct !== '' ? num(change.riskPct) : num((pkg.contract || {}).riskPct));
     // OH&P and risk belong only to built-up new rates; BOQ and pro-rata rates are all-in.
     const additionsNew = all.filter(l => l.action === 'Addition' && l.rateSource === 'New').reduce((a, l) => a + (l.raw != null ? l.raw : l.amount), 0);
     const riskRaw = Math.max(additionsNew, 0) * riskPct / 100, risk = round2(riskRaw);
